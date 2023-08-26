@@ -1,6 +1,11 @@
 # FED_Final_Project_Barber_Scheduling_App
 Barber Scheduling App - A user-friendly web app for barbershops to effortlessly schedule appointments, manage customer details, and track haircuts, powered by React and IndexedDB.
 
+![image](https://github.com/adamK563/FED_Final_Project_Barber_Scheduling_App/assets/83719998/e9b8e19e-fdf8-44c3-be91-d03264a83be7)
+
+![image](https://github.com/adamK563/FED_Final_Project_Barber_Scheduling_App/assets/83719998/3d31cddd-1db9-4de2-9df4-b309a5a5b535)
+
+
 ## Features
 
 - Choose a date and time for appointments.

@@ -84,3 +84,15 @@
 .duration-selector button:hover {
   background-color: #0056b3;
 }
+
+.total-sum {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}

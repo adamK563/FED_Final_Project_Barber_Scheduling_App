@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { addAppointment, getAppointments } from "../utils/idb"; // Import the IndexedDB functions
+import { addAppointment, getAppointments } from "../utils/idb"; // Make sure the path is correct
 import "./CalendarApp.css";
 
 function CalendarApp() {
@@ -84,7 +84,10 @@ function CalendarApp() {
     return true;
   });
 
+  const [totalPrice, setTotalPrice] = useState(0);
+
   useEffect(() => {
+    // Fetch appointments from IndexedDB and update the state
     async function fetchAppointments() {
       try {
         const appointmentsFromDB = await getAppointments();
@@ -95,7 +98,15 @@ function CalendarApp() {
     }
 
     fetchAppointments();
-  }, []);
+  }, []); // Run only on component mount
+
+  useEffect(() => {
+    // Calculate total price based on filtered appointments
+    const total = filteredAppointments.reduce((sum, appointment) => {
+      return sum + appointment.price;
+    }, 0);
+    setTotalPrice(total);
+  }, [filteredAppointments]);
 
   return (
     <div className="calendar-app">
@@ -111,6 +122,7 @@ function CalendarApp() {
           placeholder="Time"
           value={appointmentDetails.time}
           onChange={handleInputChange}
+          autoComplete="off"
         />
         <select
           name="haircutType"
@@ -127,6 +139,7 @@ function CalendarApp() {
           placeholder="Name"
           value={appointmentDetails.name}
           onChange={handleInputChange}
+          autoComplete="off"
         />
         <input
           type="text"
@@ -161,6 +174,7 @@ function CalendarApp() {
             </li>
           ))}
         </ul>
+        <div className="total-sum">Total Price: ${totalPrice}</div>
       </div>
     </div>
   );

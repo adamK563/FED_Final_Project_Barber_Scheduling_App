@@ -1,3 +1,7 @@
+/*
+  Adam Karpovich 314080383
+  Veronika Kovaleva 321777583
+*/
 import React from "react";
 import CalendarApp from "./components/CalendarApp"; // Make sure the path is correct
 

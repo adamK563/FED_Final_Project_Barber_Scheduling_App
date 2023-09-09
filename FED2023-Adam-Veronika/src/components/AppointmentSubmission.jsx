@@ -1,3 +1,7 @@
+/*
+  Adam Karpovich 314080383
+  Veronika Kovaleva 321777583
+*/
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";

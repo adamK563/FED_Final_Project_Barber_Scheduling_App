@@ -1,3 +1,7 @@
+/*
+  Adam Karpovich 314080383
+  Veronika Kovaleva 321777583
+*/
 import React, { useState, useEffect } from "react";
 import "react-calendar/dist/Calendar.css";
 import { getAppointments } from "../utils/idb";

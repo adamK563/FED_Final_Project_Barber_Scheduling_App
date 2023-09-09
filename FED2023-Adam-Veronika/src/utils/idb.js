@@ -1,3 +1,7 @@
+/*
+  Adam Karpovich 314080383
+  Veronika Kovaleva 321777583
+*/
 // Define the database and store names
 const DB_NAME = "barber_appointments";
 const STORE_NAME = "appointments";
